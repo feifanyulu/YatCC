@@ -4,7 +4,7 @@
 ## 如何打开项目
 在上一节中我们带领同学们们完成了实验环境的配置。如果同学们在环境配置结束后对 vscode 进行了关闭，可能会遇到不知道如何再次进入我们已经配好的环境的情况，所以在这一小节中我们将向同学们介绍如何在 vscode 中打开我们的项目。
 
-在上一小节环境构造时，不管同学们采用的是 `dev containers` 自动构建的方法还是手动构建的方法，打开项目的方式都是一样的。同学们首先需要点击下图中左侧箭头所示的像一台电脑一样的按钮 `remote explorer`（一个 vscode 插件，需手动安装） ，然后点击`REMOTE EXPLORER`**后**的选择框，按下向下的类三角形按钮，选择红色箭头所示的`Dev Containers`选项，之后同学们便会在下图所示的界面，将鼠标放到 `SYsU-lang2`（如果是手动配置的环境，容器名称可能不同）的位置，点击鼠标右键，再点击`Open Container in xx Window`，即可成功打开我们的实验项目环境。
+在上一小节环境构造时，不管同学们采用的是 `dev containers` 自动构建的方法还是手动构建的方法，打开项目的方式都是一样的。同学们首先需要点击下图中左侧箭头所示的像一台电脑一样的按钮 `remote explorer`（一个 vscode 插件，需手动安装） ，然后点击`REMOTE EXPLORER`**后**的选择框，按下向下的类三角形按钮，选择红色箭头所示的`Dev Containers`选项，之后同学们便会在下图所示的界面，将鼠标放到 `YatCC`（如果是手动配置的环境，容器名称可能不同）的位置，点击鼠标右键，再点击`Open Container in xx Window`，即可成功打开我们的实验项目环境。
 
 
 ![showlog](../images/howtoreopendev.jpg)
@@ -61,7 +61,7 @@ set(TASK4_REVIVE OFF)
 
 ## 如何调试代码
 在这里首先介绍如何通过肉眼比对的方式来进行 debug，在上一小节中我们介绍了如何获得当前正在做的实验的标准答案，通过对比某个测试样例下标准答案和自己的输出的 debug 方式就是肉眼比对 debug 。以`000_main.sysu.c`这个测试样例为例子，同学们可以在
-`/workspaces/SYsU-lang2/build/test/task1/functional-0/`找到`000_main.sysu.c`这个文件夹，查看文件夹中的内容可以发现存在以下三个文件夹，通过查看以下三个文件夹中的内容即可进行 debug 。
+`/workspaces/YatCC/build/test/task1/functional-0/`找到`000_main.sysu.c`这个文件夹，查看文件夹中的内容可以发现存在以下三个文件夹，通过查看以下三个文件夹中的内容即可进行 debug 。
 ```
 |-- answer.txt
 |-- output.txt

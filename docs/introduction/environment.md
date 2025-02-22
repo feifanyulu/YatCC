@@ -96,26 +96,13 @@ systemctl start docker   #启动 docker 服务
 
 请同学们确保 Docker 服务处于**启动状态**后，请点击 VSCode 左下角的红色箭头所指的齿轮，然后再点击另外红色箭头所指的按钮打开 Command Palette，或使用快捷键 `Ctrl+Shift+P` 叫出 Command Palette。
 
-<!-- 请打开[实验 github 仓库页面](https://github.com/yhgu2000/SYsU-lang)，点击 `fork` 按钮，
-
-![fork 按钮1](../images/fork1.jpg)
-
-然后同学们会看到出现以下界面，大家可以取一个自己喜欢的仓库名字，然后点击`create fork`
-
-![fork 按钮2](../images/fork2.jpg)
-
-出现如下界面则意味着同学们已经完成仓库 `fork`
-
-![fork 按钮3](../images/fork3.jpg) -->
-
-
 ![dev安装示意](../images/devcon1.jpg)
 
 此时在 VSCode 的顶部居中位置会出现如下图所示的内容，请同学们在出现的搜索栏中输入 `Dev Containers` 关键词，然后大家需要点击下图红色三角形所示的按钮 `Dev Containers: Clone Repository in Container Volume`。
 
 ![dev安装示意2](../images/devcon2.jpg)
 
-然后需要同学们在如下所示的界面输入实验仓库地址 `https://github.com/arcsysu/SYsU-lang2`，并且点击 `Clone git repository form URL` 按钮。
+然后需要同学们在如下所示的界面输入实验仓库地址 `https://github.com/arcsysu/YatCC`，并且点击 `Clone git repository form URL` 按钮。
 
 
 ![dev安装示意2](../images/newpull.png)
@@ -177,12 +164,12 @@ docker rmi dockerproxy.com/sumuzhe317/sysu-lang:latest
 在命令行中输入下面命令把实验仓库源码 clone 下来。
 
 ```bash
-git clone git@github.com:arcsysu/SYsU-lang2.git
+git clone git@github.com:arcsysu/YatCC.git
 ```
 
 ![clone 仓库](../images/wsl-git-clone.png)
 
-此时当前目录下会多一个 `SYsU-lang2` 目录，命令行输入 `code SYsU-lang2` 用 VSCode 开启该目录。
+此时当前目录下会多一个 `YatCC` 目录，命令行输入 `code YatCC` 用 VSCode 开启该目录。
 
 ![从 WSL 启动 VSCode](../images/start-code-from-wsl.png)
 
@@ -190,7 +177,7 @@ git clone git@github.com:arcsysu/SYsU-lang2.git
 
 ![安装 Dev Containers 插件](../images/install-dev-container.png)
 
-如果已经安装 Dev Containers，用 VSCode 开启 `SYsU-lang2` 目录后右下角会显示 Dev Containers 的提示，点击 `Reopen in Container` 按钮会自动进行环境配置。
+如果已经安装 Dev Containers，用 VSCode 开启 `YatCC` 目录后右下角会显示 Dev Containers 的提示，点击 `Reopen in Container` 按钮会自动进行环境配置。
 
 ![从 Dev Containers 启动镜像](../images/reopen-in-container.png)
 
@@ -278,10 +265,10 @@ apt install -y ninja-build clang-14 wget cmake xz-utils unzip g++ lld flex bison
 # bison          文法分析器构造工具   
 ```
 
-然后，我们需要将实验代码远程仓库拉取到本地。请同学们在当前窗口新建命令行终端，并在终端输入以下命令。当命令行显示如下`100%  xx done`字样时代表仓库拉取已经完成。此时在命令行输入 `ls` 命令可以看到`SYsU-lang2`实验代码文件夹。  
+然后，我们需要将实验代码远程仓库拉取到本地。请同学们在当前窗口新建命令行终端，并在终端输入以下命令。当命令行显示如下`100%  xx done`字样时代表仓库拉取已经完成。此时在命令行输入 `ls` 命令可以看到`YatCC`实验代码文件夹。  
 
 ```bash
-git clone https://mirror.ghproxy.com/https://github.com/arcsysu/SYsU-lang2
+git clone https://mirror.ghproxy.com/https://github.com/arcsysu/YatCC
 
 # `https://mirror.ghproxy.com/`是一个github 代理，方便解决可能存在的 github 访问不稳定问题
 ```
@@ -289,7 +276,7 @@ git clone https://mirror.ghproxy.com/https://github.com/arcsysu/SYsU-lang2
 
 请同学们输入以下命令进入实验代码仓库，并且查看实验代码仓库路径。  
 ```bash
-cd SYsU-lang2  # 进入文件夹
+cd YatCC       # 进入文件夹
 pwd            # 查看当前路径
 ```
 ![仓库拉取示意](../images/getloc2.png)
@@ -388,8 +375,8 @@ cmake --build build --target install
 在你的终端中输入以下指令以拉取实验代码仓库,并通过vscode打开仓库文件夹  
 
 ```bash
-git clone https://mirror.ghproxy.com/https://github.com/arcsysu/SYsU-lang2
-code SYsU-lang2
+git clone https://mirror.ghproxy.com/https://github.com/arcsysu/YatCC
+code YatCC
 ```
 
 ![拉取仓库并打开vsc](../images/pull&code.png)
@@ -423,12 +410,12 @@ apt install -y ninja-build clang-14 wget cmake xz-utils unzip g++ lld flex bison
 ### 编译安装llvm、antlr，或直接使用llvm提供的二进制包
 在上述软件成功安装之后，请大家输入以下命令进行另外两个特殊软件的安装,两种软件在对应文件夹下都有助教提前写好的自动化编译安装脚本。但由于MacOS不支持 `lld` 链接器，直接使用cmake编译安装llvm源文件会报错，这里推荐直接使用官网提供的二进制包。  
 
-注意⚠️：将 `/your/path/to/SYsU-lang2` 改为你的仓库目录所在路径
+注意⚠️：将 `/your/path/to/YatCC` 改为你的仓库目录所在路径
 #### llvm
 MacOS: 
 
 ```bash
-cd /your/path/to/SYsU-lang2/llvm
+cd /your/path/to/YatCC/llvm
 
 wget https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/clang+llvm-17.0.6-arm64-apple-darwin22.0.tar.xz # 根据你的架构选择，这里是使用Apple Silicon的机器
 
@@ -441,7 +428,7 @@ mv clang+llvm-17.0.6-arm64-apple-darwin22.0 install # 重命名,这一步非常�
 
 Linux
 ```bash
-cd /your/path/to/SYsU-lang2/llvm && bash install.sh
+cd /your/path/to/YatCC/llvm && bash install.sh
 ```
 Linux成功安装后的界面如下图所示,
 
@@ -452,7 +439,7 @@ Linux成功安装后的界面如下图所示,
 MacOS & Linux
 
 ```bash
-cd /your/path/to/SYsU-lang2/antlr && bash install.sh
+cd /your/path/to/YatCC/antlr && bash install.sh
 ```
 成功编译安装后的界面如下图所示,
 

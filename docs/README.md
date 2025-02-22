@@ -1,4 +1,4 @@
-# SYsU-lang **(2.0)**
+# YatCC
 
 中山大学（**S**un **Y**at-**s**en **U**niversity）[编译原理](https://arcsysu.github.io/teach/dcs290/s2024.html)课程实验 **2.0** 版。
 

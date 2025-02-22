@@ -676,7 +676,7 @@ declaration_list
 
 在语法分析中，bison的 `yyparse`中有下面的逻辑：
 
-- 由于实验2以复活版本的进行实验，因此输入的是task1-answer，同学们可以看下其中的一个文件：`/workspaces/SYsU-lang2/build/test/task1/functional-0/000_main.sysu.c/answer.txt`，如下图所示
+- 由于实验2以复活版本的进行实验，因此输入的是task1-answer，同学们可以看下其中的一个文件：`/workspaces/YatCC/build/test/task1/functional-0/000_main.sysu.c/answer.txt`，如下图所示
 
 ![task1-answer](../images/bison/task1-answer.png)
 
@@ -886,7 +886,7 @@ yyparse部分出现问题，即bison的文法规约等出现问题，直接设�
 ```cpp
 void printToTxtFile(std::string message) {
     std::ofstream myfile;
-    myfile.open ("/workspaces/SYsU-lang/task/2/bison/log.txt", std::ios_base::app); // 'app' means appending to the end of the file, trunc: start of the file
+    myfile.open ("/workspaces/YatCC/task/2/bison/log.txt", std::ios_base::app); // 'app' means appending to the end of the file, trunc: start of the file
     myfile << message << "\n";
     myfile.close();
 }

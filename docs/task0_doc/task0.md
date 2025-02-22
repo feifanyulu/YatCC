@@ -21,9 +21,9 @@
 
 当 vscode 输出栏中显示如下内容时代表构建成功。
 ```bash
-[main] Building folder: SYsU-lang2 task0
+[main] Building folder: YatCC task0
 [build] Starting build
-[proc] Executing command: /usr/bin/cmake --build /workspaces/SYsU-lang2/build --config Debug --target task0 --
+[proc] Executing command: /usr/bin/cmake --build /workspaces/YatCC/build --config Debug --target task0 --
 [build] [1/2  50% :: 0.661] Building CXX object task/0/CMakeFiles/task0.dir/main.cpp.o
 [build] [2/2 100% :: 0.728] Linking CXX executable task/0/task0
 [driver] Build completed: 00:00:00.781
@@ -37,10 +37,10 @@
 
 如果获得以下类似的输出代表操作正确。
 ```bash
-[main] Building folder: SYsU-lang2 task0-score
+[main] Building folder: YatCC task0-score
 [build] Starting build
-[proc] Executing command: /usr/bin/cmake --build /workspaces/SYsU-lang2/build --config Debug --target task0-score --
-[build] [1/1   0% :: 0.000] cd /workspaces/SYsU-lang2/build/test/task0 && /usr/bin/python3.10 /workspaces/SYsU-lang2/test/task0/score.py /workspaces/SYsU-lang2/build/test/task0 /workspaces/SYsU-lang2/build/task/0/task0
+[proc] Executing command: /usr/bin/cmake --build /workspaces/YatCC/build --config Debug --target task0-score --
+[build] [1/1   0% :: 0.000] cd /workspaces/YatCC/build/test/task0 && /usr/bin/python3.10 /workspaces/YatCC/test/task0/score.py /workspaces/YatCC/build/test/task0 /workspaces/YatCC/build/task/0/task0
 [build] task0 总分:100.0
 [build] 
 [build] task0    100.00/100.00  Hello, SYsU-lang!
@@ -56,20 +56,20 @@
 
 ![howtopack](../images/task0_pack.jpg)
 
-同时输出窗口会输出打包好的代码文件到指定路径，方便同学们后续上传到评测机进行代码评测。**提交前请检查文件名称是否与本人信息相符**，若不相符则在`SYsU-lang2/config.cmake`中修改。
+同时输出窗口会输出打包好的代码文件到指定路径，方便同学们后续上传到评测机进行代码评测。**提交前请检查文件名称是否与本人信息相符**，若不相符则在`YatCC/config.cmake`中修改。
 ```bash
-[main] Building folder: SYsU-lang2 task0-pack
+[main] Building folder: YatCC task0-pack
 [build] Starting build
-[proc] Executing command: /usr/bin/cmake --build /workspaces/SYsU-lang2/build --config Debug --target task0-pack --
-[build] [1/1 100% :: 0.008] cd /workspaces/SYsU-lang2/task && /usr/bin/cmake -E tar cvfJ /workspaces/SYsU-lang2/build/task/task0.0123456789-某某某.tar.xz /workspaces/SYsU-lang2/task/0 && echo 作业已打包，请提交\ '/workspaces/SYsU-lang2/build/task/task0.0123456789-某某某.tar.xz'\ 到评测服务器。 && echo 作业已打包，请提交\ '/workspaces/SYsU-lang2/build/task/task0.0123456789-某某某.tar.xz'\ 到评测服务器。 && echo 作业已打包，请提交\ '/workspaces/SYsU-lang2/build/task/task0.0123456789-某某某.tar.xz'\ 到评测服务器。
+[proc] Executing command: /usr/bin/cmake --build /workspaces/YatCC/build --config Debug --target task0-pack --
+[build] [1/1 100% :: 0.008] cd /workspaces/YatCC/task && /usr/bin/cmake -E tar cvfJ /workspaces/YatCC/build/task/task0.0123456789-某某某.tar.xz /workspaces/YatCC/task/0 && echo 作业已打包，请提交\ '/workspaces/YatCC/build/task/task0.0123456789-某某某.tar.xz'\ 到评测服务器。 && echo 作业已打包，请提交\ '/workspaces/YatCC/build/task/task0.0123456789-某某某.tar.xz'\ 到评测服务器。 && echo 作业已打包，请提交\ '/workspaces/YatCC/build/task/task0.0123456789-某某某.tar.xz'\ 到评测服务器。
 [build] 0
 [build] 0/README.md
 [build] 0/config.cmake
 [build] 0/main.cpp
 [build] 0/CMakeLists.txt
-[build] 作业已打包，请提交 /workspaces/SYsU-lang2/build/task/task0.0123456789-某某某.tar.xz 到评测服务器。
-[build] 作业已打包，请提交 /workspaces/SYsU-lang2/build/task/task0.0123456789-某某某.tar.xz 到评测服务器。
-[build] 作业已打包，请提交 /workspaces/SYsU-lang2/build/task/task0.0123456789-某某某.tar.xz 到评测服务器。
+[build] 作业已打包，请提交 /workspaces/YatCC/build/task/task0.0123456789-某某某.tar.xz 到评测服务器。
+[build] 作业已打包，请提交 /workspaces/YatCC/build/task/task0.0123456789-某某某.tar.xz 到评测服务器。
+[build] 作业已打包，请提交 /workspaces/YatCC/build/task/task0.0123456789-某某某.tar.xz 到评测服务器。
 [driver] Build completed: 00:00:00.029
 [build] Build finished with exit code 0
 ```
